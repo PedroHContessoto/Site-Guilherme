@@ -72,7 +72,8 @@ body {
   bottom: 0;
   background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
   opacity: 0.5;
-  z-index: 1;
+  z-index: -1; /* CORRIGIDO: movido para trás */
+  pointer-events: none; /* CORRIGIDO: não bloqueia cliques */
 }
 
 .glass-effect {
@@ -101,7 +102,8 @@ body {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1));
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 1;
+  z-index: -1; /* CORRIGIDO: movido para trás do conteúdo */
+  pointer-events: none; /* CORRIGIDO: não bloqueia cliques */
 }
 
 .card-premium:hover::before {
@@ -112,6 +114,12 @@ body {
   transform: translateY(-8px) scale(1.02);
   border-color: rgba(59, 130, 246, 0.3);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+/* Garantir que o conteúdo dos cards seja clicável */
+.card-premium > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Buttons */
@@ -129,6 +137,7 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  z-index: 1; /* CORRIGIDO: garantir que o botão fique na frente */
 }
 
 .button-primary::before {
@@ -140,6 +149,8 @@ body {
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s;
+  z-index: -1; /* CORRIGIDO: efeito atrás do texto */
+  pointer-events: none; /* CORRIGIDO: não bloqueia cliques */
 }
 
 .button-primary:hover::before {
@@ -149,6 +160,12 @@ body {
 .button-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Garantir que o conteúdo do botão seja clicável */
+.button-primary > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Position Badges */
@@ -161,6 +178,8 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1; /* CORRIGIDO: garantir clicabilidade */
 }
 
 /* Timeline */
@@ -183,6 +202,8 @@ body {
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1; /* CORRIGIDO: garantir clicabilidade */
 }
 
 /* Hero Title */
@@ -191,6 +212,8 @@ body {
   font-weight: 900;
   text-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
   animation: glow-pulse 3s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 1; /* CORRIGIDO: garantir que fique na frente */
 }
 
 /* Section Titles */
@@ -207,6 +230,7 @@ body {
   background-size: 200% 200%;
   animation: gradient-shift 3s ease-in-out infinite;
   position: relative;
+  z-index: 1; /* CORRIGIDO: garantir que fique na frente */
 }
 
 .section-title::after {
@@ -219,6 +243,7 @@ body {
   height: 4px;
   background: linear-gradient(90deg, #3b82f6, #06b6d4);
   border-radius: 2px;
+  pointer-events: none; /* CORRIGIDO: não bloqueia cliques */
 }
 
 /* Floating Elements */
@@ -229,7 +254,8 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 0;
+  z-index: -2; /* CORRIGIDO: bem atrás de tudo */
+  pointer-events: none; /* CORRIGIDO: não bloqueia cliques */
 }
 
 .floating-elements::before,
@@ -241,6 +267,7 @@ body {
   background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   animation: float 6s ease-in-out infinite;
+  pointer-events: none; /* CORRIGIDO: não bloqueia cliques */
 }
 
 .floating-elements::before {
@@ -258,6 +285,8 @@ body {
 /* Portfolio Cards */
 .portfolio-card {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1; /* CORRIGIDO: garantir clicabilidade */
 }
 
 .portfolio-card:hover {
@@ -268,6 +297,7 @@ body {
 .stats-card {
   position: relative;
   overflow: hidden;
+  z-index: 1; /* CORRIGIDO: garantir clicabilidade */
 }
 
 .stats-card::after {
@@ -279,10 +309,18 @@ body {
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   transition: left 0.6s;
+  z-index: -1; /* CORRIGIDO: efeito atrás do conteúdo */
+  pointer-events: none; /* CORRIGIDO: não bloqueia cliques */
 }
 
 .stats-card:hover::after {
   left: 100%;
+}
+
+/* Garantir que conteúdo dos stats cards seja clicável */
+.stats-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Animations */
@@ -313,30 +351,30 @@ body {
     font-size: 3rem;
     line-height: 1.1;
   }
-  
+
   .section-title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
   }
-  
+
   .card-premium {
     margin: 0 1rem;
   }
-  
+
   .timeline-line {
     left: 2rem;
   }
-  
+
   .club-logo {
     width: 60px;
     height: 60px;
   }
-  
+
   .position-badge {
     padding: 8px 16px;
     font-size: 0.9rem;
   }
-  
+
   .button-primary {
     padding: 10px 20px;
     font-size: 0.9rem;
@@ -347,11 +385,11 @@ body {
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .floating-elements::before,
   .floating-elements::after {
     width: 200px;
@@ -364,6 +402,8 @@ body {
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 50; /* CORRIGIDO: navbar sempre no topo */
 }
 
 /* Scroll Progress Bar */
@@ -376,6 +416,7 @@ body {
   background: linear-gradient(90deg, #3b82f6, #06b6d4, #10b981);
   transform-origin: left;
   z-index: 9999;
+  pointer-events: none; /* CORRIGIDO: não bloqueia cliques */
 }
 
 /* Custom Scrollbar */
@@ -429,14 +470,63 @@ a:focus {
   border-image: linear-gradient(135deg, #3b82f6, #06b6d4, #10b981) 1;
 }
 
+/* CORREÇÕES ADICIONAIS PARA GARANTIR CLICABILIDADE */
+
+/* Garantir que todos os links sejam clicáveis */
+a {
+  position: relative;
+  z-index: 2;
+}
+
+/* Garantir que todos os botões sejam clicáveis */
+button {
+  position: relative;
+  z-index: 2;
+}
+
+/* Garantir que elementos interativos sejam clicáveis */
+[role="button"],
+.cursor-pointer,
+input,
+select,
+textarea {
+  position: relative;
+  z-index: 2;
+}
+
+/* Correção específica para cards com conteúdo clicável */
+.card-premium a,
+.card-premium button,
+.card-premium [role="button"] {
+  position: relative;
+  z-index: 3;
+}
+
+/* Garantir que vídeos sejam clicáveis */
+video {
+  position: relative;
+  z-index: 2;
+}
+
+/* Garantir que controles de vídeo sejam clicáveis */
+video::-webkit-media-controls,
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-volume-slider {
+  z-index: 3;
+}
+
 /* Print Styles */
 @media print {
   .floating-elements,
   .glass-effect,
-  .card-premium::before {
+  .card-premium::before,
+  .button-primary::before,
+  .hero-gradient::before,
+  .stats-card::after {
     display: none;
   }
-  
+
   .text-gradient {
     color: #3b82f6;
     -webkit-text-fill-color: #3b82f6;

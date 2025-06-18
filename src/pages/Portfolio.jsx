@@ -3,33 +3,6 @@ import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Play, Image, Calendar, Trophy, Users, Target, Star, AlertCircle } from 'lucide-react';
 
-// Import player photos
-import fotoFrente from '../assets/player_photos/otima_foto_de_frente_olhando_para_direita_atual.jpeg';
-import fotoGuacuano from '../assets/player_photos/tima_todo_guacuano.jpeg';
-import fotoDriblando from '../assets/player_photos/uniao_guilher_driblando.jpeg';
-import fotoWhatsApp1 from '../assets/player_photos/WhatsApp Image 2025-06-11 at 20.30.29.jpeg';
-import fotoWhatsApp2 from '../assets/player_photos/WhatsApp Image 2025-06-11 at 20.30.30 (2).jpeg';
-import fotoWhatsApp3 from '../assets/player_photos/WhatsApp Image 2025-06-11 at 20.30.30.jpeg';
-import fotoWhatsApp4 from '../assets/player_photos/WhatsApp Image 2025-06-11 at 20.30.31.jpeg';
-import fotoCriancaPai from '../assets/player_photos/guilher_crianca_com_o_pai.jpeg';
-import fotoMedalha from '../assets/player_photos/guilher_mordendo_uma_medalha_crianca_atletico.jpeg';
-import fotoCampoPais from '../assets/player_photos/guilher_no_campo_com_o_pai_e_a_mae.jpeg';
-import fotoCaindo from '../assets/player_photos/guilherme_caindo_uniao_atras_da_bola.jpeg';
-import fotoBola from '../assets/player_photos/guilherme_com_a_bola_em_campo.jpeg';
-import fotoCostasAtletico from '../assets/player_photos/guilherme_costas_atletico.jpeg';
-import fotoCostasUniao from '../assets/player_photos/guilherme_costas_uniao.jpeg';
-import fotoCriancaPai2 from '../assets/player_photos/guilherme_crianca_com_o_pai.jpeg';
-import fotoTimeAtletico from '../assets/player_photos/guilherme_crianca_com_o_time_atlhetico.jpeg';
-import fotoTimeSul from '../assets/player_photos/guilherme_crianca_com_o_time_sulbrasileiro.jpeg';
-import fotoFrenteUniao from '../assets/player_photos/guilherme_de_frente_uniao.jpeg';
-import fotoDominando from '../assets/player_photos/guilherme_dominando_a_bola_com_3_rivais_atras.jpeg';
-import fotoEmbaixadinha from '../assets/player_photos/guilherme_fazendo_embaixadinha_atletico.jpeg';
-import fotoTrofeu from '../assets/player_photos/guilherme_segurando_um_trofel_uniao.jpeg';
-
-// Import player videos
-import videoCampeonato1 from '../assets/player_videos/campeonato_paulista_otimizado.mp4';
-import videoCampeonato2 from '../assets/player_videos/campeonato_paulista2_otimizado.mp4';
-
 function Portfolio() {
   const [activeTab, setActiveTab] = useState('videos');
   const [videoErrors, setVideoErrors] = useState({});
@@ -37,147 +10,147 @@ function Portfolio() {
 
   const playerPhotos = [
     {
-      src: fotoFrente,
+      src: "/images/player_photos/otima_foto_de_frente_olhando_para_direita_atual.jpeg",
       title: "Foto Profissional Atual",
       description: "Retrato profissional atual do jogador, demonstrando confiança e determinação",
       category: "profissional",
       icon: <Star className="w-4 h-4" />
     },
     {
-      src: fotoFrenteUniao,
+      src: "/images/player_photos/guilherme_de_frente_uniao.jpeg",
       title: "Guilherme - União São João",
       description: "Foto oficial com a camisa do União São João de Araras, clube atual",
       category: "profissional",
       icon: <Trophy className="w-4 h-4" />
     },
     {
-      src: fotoDriblando,
+      src: "/images/player_photos/uniao_guilher_driblando.jpeg",
       title: "Driblando Adversários",
       description: "Momento de habilidade técnica driblando adversários durante partida oficial",
       category: "acao",
       icon: <Target className="w-4 h-4" />
     },
     {
-      src: fotoDominando,
+      src: "/images/player_photos/guilherme_dominando_a_bola_com_3_rivais_atras.jpeg",
       title: "Dominando a Bola",
       description: "Demonstração de controle de bola com três rivais na marcação",
       category: "acao",
       icon: <Target className="w-4 h-4" />
     },
     {
-      src: fotoBola,
+      src: "/images/player_photos/guilherme_com_a_bola_em_campo.jpeg",
       title: "Em Campo com a Bola",
       description: "Jogada em campo durante partida oficial, mostrando posicionamento tático",
       category: "acao",
       icon: <Target className="w-4 h-4" />
     },
     {
-      src: fotoCaindo,
+      src: "/images/player_photos/guilherme_caindo_uniao_atras_da_bola.jpeg",
       title: "Disputa de Bola",
       description: "Momento de disputa intensa pela posse de bola durante o jogo",
       category: "acao",
       icon: <Target className="w-4 h-4" />
     },
     {
-      src: fotoTrofeu,
+      src: "/images/player_photos/guilherme_segurando_um_trofel_uniao.jpeg",
       title: "Conquista com o União",
       description: "Celebrando conquista importante com a camisa do União São João",
       category: "conquistas",
       icon: <Trophy className="w-4 h-4" />
     },
     {
-      src: fotoEmbaixadinha,
+      src: "/images/player_photos/guilherme_fazendo_embaixadinha_atletico.jpeg",
       title: "Habilidade Técnica - Athletico",
       description: "Demonstrando técnica com embaixadinhas durante período no Athletico Paranaense",
       category: "tecnica",
       icon: <Star className="w-4 h-4" />
     },
     {
-      src: fotoGuacuano,
+      src: "/images/player_photos/tima_todo_guacuano.jpeg",
       title: "Período no Guaçuano",
       description: "Foto oficial durante passagem pelo Guaçuano em 2023",
       category: "profissional",
       icon: <Calendar className="w-4 h-4" />
     },
     {
-      src: fotoCostasUniao,
+      src: "/images/player_photos/guilherme_costas_uniao.jpeg",
       title: "União São João - Costas",
       description: "Foto de costas com a camisa do clube atual, mostrando o número da camisa",
       category: "profissional",
       icon: <Trophy className="w-4 h-4" />
     },
     {
-      src: fotoCostasAtletico,
+      src: "/images/player_photos/guilherme_costas_atletico.jpeg",
       title: "Athletico Paranaense - Base",
       description: "Período de formação na base do Athletico Paranaense (2019-2022)",
       category: "formacao",
       icon: <Users className="w-4 h-4" />
     },
     {
-      src: fotoMedalha,
+      src: "/images/player_photos/guilher_mordendo_uma_medalha_crianca_atletico.jpeg",
       title: "Primeira Medalha",
       description: "Criança mordendo medalha conquistada no Athletico Paranaense - início da trajetória",
       category: "formacao",
       icon: <Trophy className="w-4 h-4" />
     },
     {
-      src: fotoTimeAtletico,
+      src: "/images/player_photos/guilherme_crianca_com_o_time_atlhetico.jpeg",
       title: "Time do Athletico - Base",
       description: "Foto com o time da base do Athletico Paranaense, formação fundamental",
       category: "formacao",
       icon: <Users className="w-4 h-4" />
     },
     {
-      src: fotoTimeSul,
+      src: "/images/player_photos/guilherme_crianca_com_o_time_sulbrasileiro.jpeg",
       title: "Time Sul-Brasileiro",
       description: "Foto com equipe do time Sul-Brasileiro durante período de formação",
       category: "formacao",
       icon: <Users className="w-4 h-4" />
     },
     {
-      src: fotoCampoPais,
+      src: "/images/player_photos/guilher_no_campo_com_o_pai_e_a_mae.jpeg",
       title: "Apoio Familiar",
       description: "Momento especial em campo com o pai e a mãe, demonstrando apoio familiar",
       category: "familia",
       icon: <Users className="w-4 h-4" />
     },
     {
-      src: fotoCriancaPai,
+      src: "/images/player_photos/guilher_crianca_com_o_pai.jpeg",
       title: "Início da Jornada",
       description: "Criança com o pai, início da paixão pelo futebol aos 7 anos",
       category: "familia",
       icon: <Calendar className="w-4 h-4" />
     },
     {
-      src: fotoCriancaPai2,
+      src: "/images/player_photos/guilherme_crianca_com_o_pai.jpeg",
       title: "Primeiros Passos",
       description: "Momentos iniciais no futebol com o apoio paterno fundamental",
       category: "familia",
       icon: <Calendar className="w-4 h-4" />
     },
     {
-      src: fotoWhatsApp1,
+      src: "/images/player_photos/WhatsApp Image 2025-06-11 at 20.30.29.jpeg",
       title: "Momento Recente 1",
       description: "Foto recente do jogador em atividade profissional",
       category: "recente",
       icon: <Star className="w-4 h-4" />
     },
     {
-      src: fotoWhatsApp2,
+      src: "/images/player_photos/WhatsApp Image 2025-06-11 at 20.30.30 (2).jpeg",
       title: "Momento Recente 2",
       description: "Registro atual da carreira profissional do atleta",
       category: "recente",
       icon: <Star className="w-4 h-4" />
     },
     {
-      src: fotoWhatsApp3,
+      src: "/images/player_photos/WhatsApp Image 2025-06-11 at 20.30.30.jpeg",
       title: "Momento Recente 3",
       description: "Foto atual demonstrando evolução e maturidade profissional",
       category: "recente",
       icon: <Star className="w-4 h-4" />
     },
     {
-      src: fotoWhatsApp4,
+      src: "/images/player_photos/WhatsApp Image 2025-06-11 at 20.30.31.jpeg",
       title: "Momento Recente 4",
       description: "Registro recente da trajetória profissional em ascensão",
       category: "recente",
@@ -188,7 +161,7 @@ function Portfolio() {
   const playerVideos = [
     {
       id: 'video1',
-      src: videoCampeonato1,
+      src: "/images/player_videos/campeonato_paulista_otimizado.mp4",
       title: "Campeonato Paulista - Highlights 1",
       description: "Melhores momentos e jogadas do Campeonato Paulista, demonstrando versatilidade e qualidade técnica em campo",
       category: "campeonato",
@@ -198,7 +171,7 @@ function Portfolio() {
     },
     {
       id: 'video2',
-      src: videoCampeonato2,
+      src: "/images/player_videos/campeonato_paulista2_otimizado.mp4",
       title: "Campeonato Paulista - Highlights 2",
       description: "Continuação dos highlights do Campeonato Paulista, mostrando diferentes posições e situações de jogo",
       category: "campeonato",
@@ -358,7 +331,6 @@ function Portfolio() {
                                     playsInline
                                     webkit-playsinline="true"
                                     className="w-full h-64 md:h-80 object-cover rounded-t-xl bg-black"
-                                    poster="/api/placeholder/600/400"
                                     onError={(e) => handleVideoError(e, video.id, video.src)}
                                     onLoadedData={() => handleVideoLoad(video.id)}
                                     onLoadStart={() => console.log(`Iniciando carregamento: ${video.title}`)}
