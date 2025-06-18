@@ -1,0 +1,264 @@
+# ===================================
+# .gitignore para Site do Guilherme
+# React + Node.js + Deploy
+# ===================================
+
+# =============================
+# Dependencies / Dependências
+# =============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# =============================
+# Runtime data / Dados de execução
+# =============================
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# =============================
+# Coverage directory / Cobertura de testes
+# =============================
+lib-cov
+coverage/
+*.lcov
+.nyc_output
+
+# =============================
+# Build outputs / Saídas de build
+# =============================
+build/
+dist/
+.next/
+out/
+.nuxt/
+.cache/
+.parcel-cache/
+
+# =============================
+# Environment files / Arquivos de ambiente
+# =============================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.development
+.env.test
+.env.production
+
+# =============================
+# IDE and Editor files / Arquivos de IDE
+# =============================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# =============================
+# OS generated files / Arquivos do sistema
+# =============================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# =============================
+# Logs / Arquivos de log
+# =============================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# =============================
+# React specific / Específico do React
+# =============================
+# Create React App
+.eslintcache
+
+# Storybook
+.storybook/
+storybook-static/
+
+# =============================
+# Testing / Testes
+# =============================
+coverage/
+.nyc_output/
+.coverage/
+*.lcov
+
+# Jest
+jest_0/
+
+# =============================
+# Temporary files / Arquivos temporários
+# =============================
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# =============================
+# Package managers / Gerenciadores de pacote
+# =============================
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Yarn
+.yarn/
+.yarn-integrity
+.pnp.*
+
+# =============================
+# Deploy platforms / Plataformas de deploy
+# =============================
+
+# Vercel
+.vercel/
+.vercel
+
+# Netlify
+.netlify/
+
+# Firebase
+.firebase/
+.firebaserc
+firebase-debug.log
+firebase-debug.*.log
+
+# Heroku
+.env.production
+
+# =============================
+# Database / Banco de dados
+# =============================
+*.db
+*.sqlite
+*.sqlite3
+
+# =============================
+# Archives / Arquivos compactados
+# =============================
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# =============================
+# Documentation / Documentação
+# =============================
+docs/_build/
+
+# =============================
+# Security / Segurança
+# =============================
+# API keys, certificates, etc.
+*.pem
+*.key
+*.cert
+*.crt
+config/keys.js
+config/prod.js
+
+# =============================
+# Media files grandes (opcional)
+# Descomente se quiser ignorar vídeos/imagens grandes
+# =============================
+# *.mp4
+# *.avi
+# *.mov
+# *.mkv
+# *.wmv
+# *.webm
+# *.m4v
+
+# Imagens grandes (opcional)
+# *.raw
+# *.tiff
+# *.bmp
+
+# =============================
+# Backup files / Arquivos de backup
+# =============================
+*.bak
+*.backup
+*.old
+*.orig
+
+# =============================
+# Runtime and cache / Cache e runtime
+# =============================
+.cache/
+.eslintcache
+.stylelintcache
+
+# Webpack
+.webpack/
+
+# Rollup
+.rollup.cache/
+
+# =============================
+# Analysis tools / Ferramentas de análise
+# =============================
+bundle-analyzer-report.html
+.bundlewatch.json
+
+# =============================
+# Local development / Desenvolvimento local
+# =============================
+.local/
+local/
+dev/
+development/
+
+# =============================
+# Miscellaneous / Diversos
+# =============================
+.git/
+.gitattributes
+.gitkeep
+
+# Editor directories and files
+.history/
+.ionide/
+
+# =============================
+# IMPORTANTE: Arquivos que DEVEM ser incluídos
+# (não adicione estes ao .gitignore)
+# =============================
+# public/
+# src/
+# package.json
+# README.md
+# src/assets/ (fotos e vídeos do portfólio)
+
+# =============================
+# Fim do .gitignore
+# ===================================
