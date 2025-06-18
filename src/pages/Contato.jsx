@@ -66,9 +66,9 @@ function Contato() {
     },
     agent: {
       name: 'Filipi da Silva Gonçalves',
-      email: 'filipi.agente@email.com', // Email fictício - substitua pelo real
-      phone: '+5519999999999', // Telefone fictício - substitua pelo real
-      whatsapp: 'https://wa.me/5519999999999', // WhatsApp fictício - substitua pelo real
+      email: 'fylypy_lip@hotmail.com', // Email fictício - substitua pelo real
+      phone: '+5519992698703', // Telefone fictício - substitua pelo real
+      whatsapp: 'https://wa.me/5519992698703', // WhatsApp fictício - substitua pelo real
       subject: 'Interesse em Representação - Guilherme Cavalhieri',
       body: 'Olá Filipi,\n\nTenho interesse em conversar sobre oportunidades para o jogador Guilherme Cavalhieri.\n\nAguardo seu contato.\n\nAtenciosamente.'
     }
