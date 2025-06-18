@@ -2,47 +2,40 @@ import React from 'react';
 import { Card, CardContent } from '../components/ui/card';
 import { Calendar } from 'lucide-react';
 
-// Import club logos
-import guaraniLogo from '../assets/club_logos/guarani_fc_logo.png';
-import amparoLogo from '../assets/club_logos/amparo_ac_logo.jpg';
-import athleticoLogo from '../assets/club_logos/athletico_paranaense_logo.png';
-import guacuanoLogo from '../assets/club_logos/guacuano_logo.png';
-import uniaoLogo from '../assets/club_logos/uniao_sao_joao_araras_logo.png';
-
 function Carreira() {
   const careerTimeline = [
     {
+      src: "/images/club_logos/guarani_fc_logo.png",
       club: "Guarani FC",
       period: "2019 (3 meses)",
-      logo: guaraniLogo,
       description: "Início da trajetória profissional",
       year: "2019"
     },
     {
+      src: "/images/club_logos/amparo_ac_logo.jpg",
       club: "Amparo AC",
       period: "2019 (3 meses)",
-      logo: amparoLogo,
       description: "Desenvolvimento técnico",
       year: "2019"
     },
     {
+      src: "/images/club_logos/athletico_paranaense_logo.png",
       club: "Athletico Paranaense",
       period: "2019 a 2022 (3-4 anos)",
-      logo: athleticoLogo,
       description: "Formação na base de um grande clube",
       year: "2019-2022"
     },
     {
+      src: "/images/club_logos/guacuano_logo.png",
       club: "Guaçuano",
       period: "2023",
-      logo: guacuanoLogo,
       description: "Experiência profissional",
       year: "2023"
     },
     {
+      src: "/images/club_logos/uniao_sao_joao_araras_logo.png",
       club: "União São João de Araras",
       period: "2024 até o momento",
-      logo: uniaoLogo,
       description: "Clube atual - Excelente desempenho",
       year: "2024",
       current: true
@@ -73,11 +66,11 @@ function Carreira() {
                                 <p className="text-lg text-blue-400 mb-2">{item.period}</p>
                                 <p className="text-white/70">{item.description}</p>
                               </div>
-                              <img src={item.logo} alt={`${item.club} logo`} className="club-logo group-hover:scale-110 transition-transform" />
+                              <img src={item.src} alt={`${item.club} logo`} className="club-logo group-hover:scale-110 transition-transform" />
                             </>
                           ) : (
                             <>
-                              <img src={item.logo} alt={`${item.club} logo`} className="club-logo group-hover:scale-110 transition-transform" />
+                              <img src={item.src} alt={`${item.club} logo`} className="club-logo group-hover:scale-110 transition-transform" />
                               <div>
                                 <h3 className="text-2xl font-bold text-gradient mb-2">{item.club}</h3>
                                 <p className="text-lg text-blue-400 mb-2">{item.period}</p>
